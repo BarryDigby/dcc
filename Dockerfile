@@ -14,8 +14,10 @@ RUN apt-get install --yes build-essential \
                         unzip \
                         expat \
                         libexpat-dev \
-                        libtbb-dev \
-                        python3.8
+                        libtbb-dev
+                        
+RUN sudo add-apt-repository ppa:deadsnakes/ppa
+RUN sudo apt install python3.10
 
 WORKDIR /usr/src/app
 RUN wget --no-check-certificate https://github.com/dieterich-lab/DCC/archive/v0.5.0.tar.gz

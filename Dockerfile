@@ -7,6 +7,7 @@ LABEL authors="Barry Digby" \
 RUN apt-get update; apt-get clean all;
 
 RUN apt-get install --yes build-essential \
+                        software-properties-common \
                         gcc-multilib \
                         apt-utils \
                         zip \
